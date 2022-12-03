@@ -1,13 +1,17 @@
 import { Command, Flags } from '@oclif/core'
-import { config } from '../../utils/conf'
+import * as notifier from 'node-notifier'
+import { clear } from '../../utils/local'
 
 export default class LogoutIndex extends Command {
   static description = 'logout'
   clear = () => {
-    config.delete('user_token')
-    config.delete('user_name')
+    clear()
   }
   public async run(): Promise<void> {
     this.clear()
+    notifier.notify({
+      title: 'easyrn',
+      message: '退出登录成功'
+    })
   }
 }
