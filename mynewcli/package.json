@@ -10,6 +10,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "repository": "zhuliminl/easyrn",
+  "type": "module",
   "files": [
     "/bin",
     "/dist",
