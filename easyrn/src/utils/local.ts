@@ -8,7 +8,7 @@ export const getToken = () => {
 }
 
 export const updateToken = (v: string) => {
-  console.log('updateToken', v)
+  console.log('-----------updateToken', v)
   config.set(KEY_TOKEN, v)
 }
 
@@ -21,7 +21,7 @@ export const getUsername = () => {
 }
 
 export const updateUsername = (v: string) => {
-  console.log('updateUsername', v)
+  console.log('-------------updateUsername', v)
   config.set(KEY_USERNAME, v)
 }
 
