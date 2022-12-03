@@ -1,4 +1,6 @@
-import {Command, Flags} from '@oclif/core'
+import { Command, Flags } from '@oclif/core'
+import config from '../../conf'
+import fetch from 'node-fetch'
 
 export default class LoginIndex extends Command {
   static description = 'describe the command here'
@@ -9,20 +11,24 @@ export default class LoginIndex extends Command {
 
   static flags = {
     // flag with a value (-n, --name=VALUE)
-    name: Flags.string({char: 'n', description: 'name to print'}),
+    name: Flags.string({ char: 'n', description: 'name to print' }),
     // flag with no value (-f, --force)
-    force: Flags.boolean({char: 'f'}),
+    force: Flags.boolean({ char: 'f' }),
   }
 
-  static args = [{name: 'file'}]
+  static args = [{ name: 'file' }]
 
   public async run(): Promise<void> {
-    const {args, flags} = await this.parse(LoginIndex)
+    const { args, flags } = await this.parse(LoginIndex)
+    console.log('saul CCCCCccc', config.get('name'))
 
-    const name = flags.name ?? 'world'
-    this.log(`hello ${name} from /Users/zhuliming/dev/goDev/easyrn/easyrn-cli/mynewcli/src/commands/login/index.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
-    }
+    config.set("name", "saul")
+
+    const response = await fetch('https://github.com/');
+    // const body = await response.text();
+
+    // console.log('body',body);
+
   }
+
 }
