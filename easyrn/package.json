@@ -21,14 +21,17 @@
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.1.7",
     "conf": "^10.2.0",
-    "node-fetch": "2"
+    "node-fetch": "2",
+    "qrcode": "^1.5.1"
   },
   "devDependencies": {
     "@oclif/test": "^2.2.12",
     "@types/chai": "^4",
+    "@types/inquirer": "^9.0.3",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.18.4",
     "@types/node-fetch": "^2.6.2",
+    "@types/qrcode": "^1.5.0",
     "chai": "^4",
     "eslint": "^7.32.0",
     "eslint-config-oclif": "^4",
