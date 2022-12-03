@@ -1,6 +1,6 @@
 import { Command, Flags, CliUx } from '@oclif/core'
 import fetch from 'node-fetch';
-import { updateToken, updateUsername } from '../../utils/local';
+import { getToken, getUsername, updateToken, updateUsername } from '../../utils/local';
 
 const inquirer = require('inquirer')
 var QRCode = require('qrcode')
@@ -44,7 +44,7 @@ export default class LoginIndex extends Command {
       this.loginByEmail()
     }
     if (stageKey === 'phoneNumber') {
-      this.loginByEmail()
+      this.loginByPhone()
     }
     if (stageKey === 'wx') {
       this.loginByWx()

@@ -9,7 +9,7 @@ export const getToken = () => {
 
 export const updateToken = (v: string) => {
   console.log('updateToken', v)
-  return config.get(KEY_TOKEN, v)
+  config.set(KEY_TOKEN, v)
 }
 
 export const clearToken = () => {
@@ -22,7 +22,7 @@ export const getUsername = () => {
 
 export const updateUsername = (v: string) => {
   console.log('updateUsername', v)
-  return config.get(KEY_USERNAME, v)
+  config.set(KEY_USERNAME, v)
 }
 
 export const clearUsername = () => {
