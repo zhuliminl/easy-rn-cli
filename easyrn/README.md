@@ -20,7 +20,7 @@ $ npm install -g easyrn
 $ easyrn COMMAND
 running command...
 $ easyrn (--version)
-easyrn/0.0.0 darwin-x64 node-v18.11.0
+easyrn/0.0.0 darwin-x64 node-v16.18.0
 $ easyrn --help [COMMAND]
 USAGE
   $ easyrn COMMAND
@@ -29,9 +29,12 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`easyrn hello PERSON`](#easyrn-hello-person)
-* [`easyrn hello world`](#easyrn-hello-world)
+* [`easyrn build [FILE]`](#easyrn-build-file)
+* [`easyrn clear`](#easyrn-clear)
 * [`easyrn help [COMMAND]`](#easyrn-help-command)
+* [`easyrn init [FILE]`](#easyrn-init-file)
+* [`easyrn login [FILE]`](#easyrn-login-file)
+* [`easyrn logout`](#easyrn-logout)
 * [`easyrn plugins`](#easyrn-plugins)
 * [`easyrn plugins:install PLUGIN...`](#easyrn-pluginsinstall-plugin)
 * [`easyrn plugins:inspect PLUGIN...`](#easyrn-pluginsinspect-plugin)
@@ -41,46 +44,43 @@ USAGE
 * [`easyrn plugins:uninstall PLUGIN...`](#easyrn-pluginsuninstall-plugin-1)
 * [`easyrn plugins:uninstall PLUGIN...`](#easyrn-pluginsuninstall-plugin-2)
 * [`easyrn plugins update`](#easyrn-plugins-update)
+* [`easyrn publish [FILE]`](#easyrn-publish-file)
+* [`easyrn start`](#easyrn-start)
 
-## `easyrn hello PERSON`
+## `easyrn build [FILE]`
 
-Say hello
+describe the command here
 
 ```
 USAGE
-  $ easyrn hello [PERSON] -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
+  $ easyrn build [FILE] [-n <value>] [-f]
 
 FLAGS
-  -f, --from=<value>  (required) Who is saying hello
+  -f, --force
+  -n, --name=<value>  name to print
 
 DESCRIPTION
-  Say hello
+  describe the command here
 
 EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
+  $ easyrn build
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/zhuliminl/hello-world/blob/v0.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/build/index.ts](https://github.com/zhuliminl/hello-world/blob/v0.0.0/dist/commands/build/index.ts)_
 
-## `easyrn hello world`
+## `easyrn clear`
 
-Say hello world
+xxxx
 
 ```
 USAGE
-  $ easyrn hello world
+  $ easyrn clear
 
 DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ easyrn hello world
-  hello world! (./src/commands/hello/world.ts)
+  xxxx
 ```
+
+_See code: [dist/commands/clear/index.ts](https://github.com/zhuliminl/hello-world/blob/v0.0.0/dist/commands/clear/index.ts)_
 
 ## `easyrn help [COMMAND]`
 
@@ -101,6 +101,59 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.19/src/commands/help.ts)_
+
+## `easyrn init [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ easyrn init [FILE] [-n <value>] [-f]
+
+FLAGS
+  -f, --force
+  -n, --name=<value>  name to print
+
+DESCRIPTION
+  describe the command here
+
+EXAMPLES
+  $ easyrn init
+```
+
+_See code: [dist/commands/init/index.ts](https://github.com/zhuliminl/hello-world/blob/v0.0.0/dist/commands/init/index.ts)_
+
+## `easyrn login [FILE]`
+
+登录
+
+```
+USAGE
+  $ easyrn login [FILE] [-n <value>] [-f]
+
+FLAGS
+  -f, --force
+  -n, --name=<value>  name to print
+
+DESCRIPTION
+  登录
+```
+
+_See code: [dist/commands/login/index.ts](https://github.com/zhuliminl/hello-world/blob/v0.0.0/dist/commands/login/index.ts)_
+
+## `easyrn logout`
+
+logout
+
+```
+USAGE
+  $ easyrn logout
+
+DESCRIPTION
+  logout
+```
+
+_See code: [dist/commands/logout/index.ts](https://github.com/zhuliminl/hello-world/blob/v0.0.0/dist/commands/logout/index.ts)_
 
 ## `easyrn plugins`
 
@@ -331,4 +384,39 @@ FLAGS
 DESCRIPTION
   Update installed plugins.
 ```
+
+## `easyrn publish [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ easyrn publish [FILE] [-n <value>] [-f]
+
+FLAGS
+  -f, --force
+  -n, --name=<value>  name to print
+
+DESCRIPTION
+  describe the command here
+
+EXAMPLES
+  $ easyrn publish
+```
+
+_See code: [dist/commands/publish/index.ts](https://github.com/zhuliminl/hello-world/blob/v0.0.0/dist/commands/publish/index.ts)_
+
+## `easyrn start`
+
+start project
+
+```
+USAGE
+  $ easyrn start
+
+DESCRIPTION
+  start project
+```
+
+_See code: [dist/commands/start/index.ts](https://github.com/zhuliminl/hello-world/blob/v0.0.0/dist/commands/start/index.ts)_
 <!-- commandsstop -->

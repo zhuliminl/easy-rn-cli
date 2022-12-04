@@ -1,6 +1,6 @@
 import { Command, Flags, CliUx } from '@oclif/core'
 import fetch from 'node-fetch';
-import { getToken, getUsername, updateToken, updateUsername } from '../../utils/local';
+import { config } from '../../utils/local';
 
 const inquirer = require('inquirer')
 var QRCode = require('qrcode')
@@ -84,8 +84,8 @@ export default class LoginIndex extends Command {
   }
 
   onLoginSuccess = ({ token = '', username = '' }) => {
-    updateToken(token)
-    updateUsername(username)
+    config.updateToken(token)
+    config.updateUsername(username)
   }
 
   public async run(): Promise<void> {
